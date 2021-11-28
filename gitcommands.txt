@@ -1,0 +1,10 @@
+cd : change directory
+dir : file listing
+git status : sync status, check changes
+git add name_of_file : add the file to Git (it is NOT yet commited or pushed to the repository/branch)
+git add -A : add all 
+git add . : add all
+git commit -m "enter comment" : commits the changed file(s) and adds the comment (comment acts as a collaboration tool)
+[esc] + :wq : if you forget to add a comment, the terminal will open a kind of comment editor, to exit after amending comment execute this command
+git push : push your commited changes to your remote repositry on GitHub
+git pull : pull all changes from the remote repository to your local editor (e.g. the changes from your collaborators)
