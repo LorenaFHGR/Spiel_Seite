@@ -4,8 +4,76 @@ Die Funktionen sind einzeln beschrieben.*/
 
 // ----------------------------- Funktion 1 Beginn ----------------------------- //
 /* 
+Mapping der Daten Bretts in der Tabelle, analog zu den ID's im HTML-Code
+*/
+
+const brett = [
+    steinS1, steinS2, null, null, null, null, null, null, null, steinW1, steinW2,
+    steinS3, steinS4, null, null, null, null, null, null, null, steinW3, steinW4,
+    steinS5, steinS6, null, null, null, null, null, null, null, steinW5, steinW6,
+    steinS7, steinS8, null, null, null, null, null, null, null, steinW7, steinW8,
+    null, steinS9, null, null, null, null, null, null, null, steinW9, null,
+    null, null, null, null, null, null, null, null, null, null, null,
+    null, null, null, null, null, null, null, null, null, null, null
+]
+
+// ----------------------------- Funktion 1 Ende ----------------------------- //
+
+// ----------------------------- Funktion 2 Anfang ----------------------------- //
+/* 
+Definieren der benötigten Variablen 
+*/
+
+const zellen = document.querySelectorAll("td");
+let schwarzeFiguren = document.querySelectorAll(".schwarzerStein");
+let weisseFiguren = document.querySelectorAll(".weisserStein");
+
+/* Speichern des Spielstandes mit der Anzahl Steine */
+
+let schwarzSpielstand = 9;
+let weissSpielstand = 9; 
+let spielsteine;
+
+// ----------------------------- Funktion 2 Ende ----------------------------- //
+
+// ----------------------------- Funktion 3 Anfang ----------------------------- //
+/* 
+Das folgende Object beschreibt den vom Spieler ausgewählten Stein und seine möglichen Bewegungen auf dem Mühle-Brett 
+*/
+
+let ausgewählterStein = {
+    steinID: "",
+    brettIndex: -1,
+    nachOben: false,
+    nachUnten: false,
+    nachRechts: false,
+    nachLinks: false
+}
+
+// ----------------------------- Funktion 3 Ende ----------------------------- //
+
+// ----------------------------- Funktion x Anfang ----------------------------- //
+/* 
+Definieren der Anleitung 
+*/
+
+
+// ----------------------------- Funktion x Ende ----------------------------- //
+
+// ----------------------------- Funktion x Anfang ----------------------------- //
+/* 
+Definieren der Anleitung 
+*/
+
+
+// ----------------------------- Funktion x Ende ----------------------------- //
+
+
+// ----------------------------- Funktion x Anfang ----------------------------- //
+/* 
 Drag and drop der Spielfiguren
 */
+
 function allowDrop(event) {
     event.preventDefault();
 }
@@ -20,16 +88,13 @@ function drop(event) {
     event.target.appendChild(document.getElementById(data));
 }
 
+// ----------------------------- Funktion x Ende ----------------------------- //
 
-
-// ----------------------------- Funktion 1 Ende ----------------------------- //
-
-
-// ----------------------------- Funktion 2 Anfang ----------------------------- //
+// ----------------------------- Funktion x Anfang ----------------------------- //
 /* 
 Definieren der Anleitung 
 */
 
 let klickbare_anleitung = getElementById("anleitung");
 
-// ----------------------------- Funktion 2 Ende ----------------------------- //
+// ----------------------------- Funktion x Ende ----------------------------- //

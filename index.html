@@ -24,37 +24,140 @@
             <span id="effekt">Anleitung</span>
         </div>
 
-        <div id="spiel" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div id="spiel">
             <img src="pictures/spiel1.png" id="spielbrett" >
+        </div>
 
-            <img src="pictures/spielfigur_schwarz1.png" id="figur1s" class =
-            "figurenS" draggable="true" ondragstart="drag(event)">
-            <img src="pictures/spielfigur_schwarz1.png" id="figur2s" class =
-            "figurenS" draggable="true" ondragstart="drag(event)">
-            <img src="pictures/spielfigur_schwarz1.png" id="figur3s" class =
-            "figurenS" draggable="true" ondragstart="drag(event)">
-            <img src="pictures/spielfigur_schwarz1.png" id="figur4s" class =
-            "figurenS" draggable="true" ondragstart="drag(event)">
-            <img src="pictures/spielfigur_schwarz1.png" id="figur5s" class =
-            "figurenS" draggable="true" ondragstart="drag(event)"> 
-            <img src="pictures/spielfigur_schwarz1.png" id="figur6s" class =
-            "figurenS" draggable="true" ondragstart="drag(event)">
-            <img src="pictures/spielfigur_schwarz1.png" id="figur7s" class =
-            "figurenS" draggable="true" ondragstart="drag(event)">
-            <img src="pictures/spielfigur_schwarz1.png" id="figur8s" class =
-            "figurenS" draggable="true" ondragstart="drag(event)">
-            <img src="pictures/spielfigur_schwarz1.png" id="figur9s" class =
-            "figurenS" draggable="true" ondragstart="drag(event)">
-
-            <img src="pictures/spielfigur_weiss1.png" id="figur1w" class ="figurenW" draggable="true">
-            <img src="pictures/spielfigur_weiss1.png" id="figur2w" class ="figurenW" draggable="true">
-            <img src="pictures/spielfigur_weiss1.png" id="figur3w" class ="figurenW" draggable="true">
-            <img src="pictures/spielfigur_weiss1.png" id="figur4w" class ="figurenW" draggable="true">
-            <img src="pictures/spielfigur_weiss1.png" id="figur5w" class ="figurenW" draggable="true">
-            <img src="pictures/spielfigur_weiss1.png" id="figur6w" class ="figurenW" draggable="true">
-            <img src="pictures/spielfigur_weiss1.png" id="figur7w" class ="figurenW" draggable="true">
-            <img src="pictures/spielfigur_weiss1.png" id="figur8w" class ="figurenW" draggable="true">
-            <img src="pictures/spielfigur_weiss1.png" id="figur9w" class ="figurenW" draggable="true">
+        <div id="koordinaten">
+            <table>
+                <tr>
+                    <td class="ablage" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <span class="schwarzerStein" id="steinS1" draggable="true"></span>
+                    </td>
+                    <td class="ablage" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <span class="schwarzerStein" id="steinS2" draggable="true"></span>
+                    </td>
+                    <td id="A1" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td class="keinStein"></td>
+                    <td class="keinStein"></td>
+                    <td id="A4" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td class="keinStein"></td>
+                    <td class="keinStein"></td>
+                    <td id="A7" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td class="ablage" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <span class="weisserStein" id="steinW1" draggable="true"></span>
+                    </td>
+                    <td class="ablage" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <span class="weisserStein" id="steinW2" draggable="true"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ablage" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <span class="schwarzerStein" id="steinS3" draggable="true"></span>
+                    </td>
+                    <td class="ablage" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <span class="schwarzerStein" id="steinS4" draggable="true"></span>
+                    </td>
+                    <td class="keinStein"></td>
+                    <td id="B2" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td class="keinStein"></td>
+                    <td id="B4" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td class="keinStein"></td>
+                    <td id="B6" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td class="keinStein"></td>
+                    <td class="ablage" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <span class="weisserStein" id="steinW3" draggable="true"></span>
+                    </td>
+                    <td class="ablage" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <span class="weisserStein" id="steinW4" draggable="true"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ablage" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <span class="schwarzerStein" id="steinS5" draggable="true"></span>
+                    </td>
+                    <td class="ablage" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <span class="schwarzerStein" id="steinS6" draggable="true"></span>
+                    </td>
+                    <td class="keinStein"></td>
+                    <td class="keinStein"></td>
+                    <td id="C3" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td id="C4" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td id="C5" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td class="keinStein"></td>
+                    <td class="keinStein"></td>
+                    <td class="ablage" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <span class="weisserStein" id="steinW5" draggable="true"></span>
+                    </td>
+                    <td class="ablage" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <span class="weisserStein" id="steinW6" draggable="true"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ablage" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <span class="schwarzerStein" id="steinS7" draggable="true"></span>
+                    </td>
+                    <td class="ablage" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"">
+                        <span class="schwarzerStein" id="steinS8" draggable="true"></span>
+                    </td>
+                    <td id="D1" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td id="D2" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td id="D3" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td class="keinStein"></td>
+                    <td id="D5" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td id="D6" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td id="D7" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td class="ablage" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <span class="weisserStein" id="steinW7" draggable="true"></span>
+                    </td>
+                    <td class="ablage" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <span class="weisserStein" id="steinW8" draggable="true"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ablage"></td>
+                    <td class="ablage" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <span class="schwarzerStein" id="steinS9" draggable="true"></span>
+                    </td>
+                    <td class="keinStein"></td>
+                    <td class="keinStein"></td>
+                    <td id="E3" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td id="E4" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td id="E5" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td class="keinStein"></td>
+                    <td class="keinStein"></td>
+                    <td class="ablage" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <span class="weisserStein" id="steinW9" draggable="true"></span>
+                    </td>
+                    <td class="ablage"></td>
+                </tr>
+                <tr>
+                    <td class="ablage"></td>
+                    <td class="ablage"></td>
+                    <td class="keinStein"></td>
+                    <td id="F2" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td class="keinStein"></td>
+                    <td id="F4" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td class="keinStein"></td>
+                    <td id="F6" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td class="keinStein"></td>
+                    <td class="ablage"></td>
+                    <td class="ablage"></td>
+                </tr>
+                <tr>
+                    <td class="ablage"></td>
+                    <td class="ablage"></td>
+                    <td id="G1" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td class="keinStein"></td>
+                    <td class="keinStein"></td>
+                    <td id="G4" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td class="keinStein"></td>
+                    <td class="keinStein"></td>
+                    <td id="G7" ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td class="ablage"></td>
+                    <td class="ablage"></td>
+                </tr>
+            </table>
         </div>
 
         <footer>

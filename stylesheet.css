@@ -52,102 +52,35 @@ h2 {
   position: relative;
 }
 
-.figurenS {
+table {
   position: absolute;
+  top: 200px;
+  left: 331px;
 }
 
-#figur1s {
-  top: 210px;
-  left: 400px;
+td {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  border: 1px solid black;
 }
 
-#figur2s {
-  top: 270px;
-  left: 400px;
+.schwarzerStein {
+  width: 20px;
+  height: 20px;
+  padding: 12px 20px;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 50%;
 }
 
-#figur3s {
-  top: 330px;
-  left: 400px;
-}
-
-#figur4s {
-  top: 390px;
-  left: 400px;
-}
-
-#figur5s {
-  top: 450px;
-  left: 400px;
-}
-
-#figur6s {
-  top: 510px;
-  left: 400px;
-}
-
-#figur7s {
-  top: 570px;
-  left: 400px;
-}
-
-#figur8s {
-  top: 630px;
-  left: 400px;
-}
-
-#figur9s {
-  top: 690px;
-  left: 400px;
-}
-
-.figurenW {
-  position: absolute;
-}
-
-#figur1w {
-  top: 210px;
-  right: 400px;
-}
-
-#figur2w {
-  top: 270px;
-  right: 400px;
-}
-
-#figur3w {
-  top: 330px;
-  right: 400px;
-}
-
-#figur4w {
-  top: 390px;
-  right: 400px;
-}
-
-#figur5w {
-  top: 450px;
-  right: 400px;
-}
-
-#figur6w {
-  top: 510px;
-  right: 400px;
-}
-
-#figur7w {
-  top: 570px;
-  right: 400px;
-}
-
-#figur8w {
-  top: 630px;
-  right: 400px;
-}
-
-#figur9w {
-  top: 690px;
-  right: 400px;
+.weisserStein {
+  width: 20px;
+  height: 20px;
+  padding: 12px 20px;
+  background-color: wheat;
+  border: 0.5px solid white;
+  border-radius: 50%;
 }
 
 footer {
