@@ -43,19 +43,28 @@ h2 {
 }
 
 #spiel {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#spielbrett {
-  margin: auto;
-  display: block;
+/* #spielbrett {
+  margin: auto; 
+  display: inline-block;
   position: relative;
+} */
+
+#koordinaten {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 table {
-  position: absolute;
-  top: 200px;
-  left: 331px;
+  /* position: absolute;
+  top: 200px; */
+  /* left: 331px; */
+  margin-top: -520px;
 }
 
 td {
@@ -68,7 +77,7 @@ td {
 .schwarzerStein {
   width: 20px;
   height: 20px;
-  padding: 12px 20px;
+  padding: 15px 23px;
   background-color: black;
   border: 1px solid white;
   border-radius: 50%;
@@ -77,7 +86,7 @@ td {
 .weisserStein {
   width: 20px;
   height: 20px;
-  padding: 12px 20px;
+  padding: 15px 23px;
   background-color: wheat;
   border: 0.5px solid white;
   border-radius: 50%;
@@ -86,6 +95,5 @@ td {
 footer {
   font-size: 10px;
   text-align: center;
-  margin: 0px;
-  padding-top: 50px;
+  padding-top: 40px;
 }
