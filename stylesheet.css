@@ -6,40 +6,21 @@ body {
   color: black;
 }
 
-h2 {
-  font-family: fantasy;
-  font-size: 40px;
+#uebertitel {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 60px;
   text-align: center;
   padding-bottom: 10px;
-  border-bottom: 1px;
+  border-bottom: 5px;
   border-bottom-style: solid;
-  border-color: darkgray;
+  border-color: black;
 }
 
 #titel {
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
+  padding-bottom: 50px;
   margin-top: -20px;
-}
-
-#effekt {
-  background-color: lightgray;
-  border: none;
-  color: black;
-  font-size: 18px;
-  padding: 15px 30px;
-  text-align: center;
-  display: inline-block;
-}
-
-#anleitung {
-  text-align: right;
-  padding-bottom: 30px;
-}
-
-#effekt:hover {
-  background-color: darkgray;
-  color: white;
 }
 
 #spiel {
@@ -74,6 +55,9 @@ td {
   border: 1px solid white;
   border-radius: 50%;
 }
+.schwarzerStein:hover {
+  background-color: darkslategray;
+}
 
 .weisserStein {
   width: 20px;
@@ -83,9 +67,46 @@ td {
   border: 0.5px solid white;
   border-radius: 50%;
 }
+.weisserStein:hover {
+  background-color: burlywood;
+}
+
+.anleitung {
+  font-size: 40px;
+  text-align: center;
+  color: wheat;
+  border-radius: 50%;
+  background-color: black;
+  width: 50px;
+  height: 50px;
+}
+
+.anleitung::before,
+.anleitung::after {
+  position: absolute;
+  top: 18.5rem;
+  transform: translateX(-50%) translateY (-80);
+  transition: 50ms transform;
+}
+
+.anleitung:hover::before {
+  content: attr(data-tooltip);
+  color: black;
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+  width: 300px;
+  height: 410px;
+  background: rgba(245, 222, 179, 0.836);
+}
+
+.anleitung:hover {
+  background-color: rgba(245, 222, 179, 0.562);
+  color: black;
+}
 
 footer {
   font-size: 10px;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 20px;
 }
