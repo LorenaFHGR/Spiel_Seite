@@ -44,7 +44,7 @@ h2 {
 
 #spiel {
   display: flex;
-  align-items: center;
+  align-content: center;
   justify-content: center;
 }
 
@@ -56,7 +56,7 @@ h2 {
 
 #koordinaten {
   display: flex;
-  align-items: center;
+  align-content: center;
   justify-content: center;
 }
 
