@@ -48,12 +48,6 @@ h2 {
   justify-content: center;
 }
 
-/* #spielbrett {
-  margin: auto; 
-  display: inline-block;
-  position: relative;
-} */
-
 #koordinaten {
   display: flex;
   align-content: center;
@@ -61,10 +55,8 @@ h2 {
 }
 
 table {
-  /* position: absolute;
-  top: 200px; */
-  /* left: 331px; */
   margin-top: -520px;
+  align-items: center;
 }
 
 td {
