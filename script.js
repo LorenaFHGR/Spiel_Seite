@@ -26,7 +26,30 @@ function drop(event) {
 
 // ----------------------------- Funktion 2 Anfang ----------------------------- //
 /* 
+Event-Listener hinzufügen für den Refresh-Button, um die Seite (und somit das Spiel) auf Knopfdruck
+neu zu laden bzw. neu zu beginnen
+*/
+
+document.querySelector(".refresh").addEventListener("click", function reload (){
+    reload=location.reload(); 
+})
+
+/*
+Hier wird der Cursor beim Hovering über den Refresh-Button zu einem "Pointer" geändert, um das Klickbare
+abzubilden und ihn optisch und intuitiv vom Anleitungs-Button zu unterscheiden (beim Anleitungs-Button 
+wird default-mässig beim Hover der Text-Cursor gezeigt, um ein Lesen deutlich zu machen). 
+*/
+document.querySelector(".refresh").style.cursor="pointer";
+
+// ----------------------------- Funktion 2 Ende ----------------------------- //
+
+// ----------------------------- Funktion 3 Anfang ----------------------------- //
+/* 
 Mapping der Daten Bretts in der Tabelle, analog zu den ID's im HTML-Code
+
+Anmerkung: Dieses Mapping wurde nicht verwendet. Es sollte für das Hintergrund-Mapping des Spiels
+dienlich sein, um Spielzüge zu erkennen und speichern. Es wurde absichtlich drin gelassen, um den Versuch
+zu veranschaulichen und für allfällige Erweiterungen im nächsten WEBP-Kurs. 
 */
 
 const brett = [
@@ -39,122 +62,4 @@ const brett = [
     null, null, null, null, null, null, null, null, null, null, null
 ]
 
-// ----------------------------- Funktion 2 Ende ----------------------------- //
-
-// ----------------------------- Funktion 3 Anfang ----------------------------- //
-/* 
-Definieren der benötigten Variablen 
-*/
-
-const zellen = document.querySelectorAll("td");
-let schwarzeFiguren = document.querySelectorAll(".schwarzerStein");
-let weisseFiguren = document.querySelectorAll(".weisserStein");
-
-/* Speichern des Spielstandes mit der Anzahl Steine */
-
-let amZug = true; // true steht für den weissen Spielzug, false für den schwarzen
-let schwarzSpielstand = 9;
-let weissSpielstand = 9; 
-let spielsteine;
-
 // ----------------------------- Funktion 3 Ende ----------------------------- //
-
-// ----------------------------- Funktion 4 Anfang ----------------------------- //
-/* 
-Das folgende Object beschreibt den vom Spieler ausgewählten Stein und seine möglichen Bewegungen auf dem Mühle-Brett 
-*/
-
-let ausgewählterStein = {
-    steinID: -1,
-    brettIndex: -1,
-    nachOben: false,
-    nachUnten: false,
-    nachRechts: false,
-    nachLinks: false
-}
-
-// ----------------------------- Funktion 4 Ende ----------------------------- //
-
-// ----------------------------- Funktion 5 Anfang ----------------------------- //
-/* 
-Die Spielsteine erhalten einen event listener für das Drag 
-*/
-
-function spielsteineMitEventListener() {
-    if (amZug) {
-        for (let i = 0; i < weisseFiguren.length; i++) {
-            weisseFiguren[i].addEventListener("drag", holSpielsteine);
-        }
-    }
-    else {
-        for (let i = 0; i < schwarzeFiguren.length; i++) {
-            schwarzeFiguren[i].addEventListener("drag", holSpielsteine);
-        }
-    }
-}
-
-// ----------------------------- Funktion 5 Ende ----------------------------- //
-
-// ----------------------------- Funktion 6 Anfang ----------------------------- //
-/* 
-asdfjklö
-*/
-
-
-// ----------------------------- Funktion 6 Ende ----------------------------- //
-
-// ----------------------------- Funktion 7 Anfang ----------------------------- //
-/* 
-asdf jklö
-*/
-
-
-
-// ----------------------------- Funktion 7 Ende ----------------------------- //
-
-// ----------------------------- Funktion 8 Anfang ----------------------------- //
-/* 
-asdfjklö
-*/
-
-
-
-// ----------------------------- Funktion 8 Ende ----------------------------- //
-
-// ----------------------------- Funktion 9 Anfang ----------------------------- //
-/* 
-asdfjklö
-*/
-
-
-// ----------------------------- Funktion 9 Ende ----------------------------- //
-
-// ----------------------------- Funktion x Anfang ----------------------------- //
-/* 
-asdfjkl
-*/
-
-
-// ----------------------------- Funktion x Ende ----------------------------- //
-
-// ----------------------------- Funktion x Anfang ----------------------------- //
-/* 
-asdfjkl
-*/
-
-
-// ----------------------------- Funktion x Ende ----------------------------- //
-
-
-// ----------------------------- Funktion x Anfang ----------------------------- //
-/* 
-Definieren der Anleitung 
-*/
-
-let klickbare_anleitung = getElementById("anleitung");
-
-// ----------------------------- Funktion x Ende ----------------------------- //
-
-
-
-spielsteineMitEventListener()

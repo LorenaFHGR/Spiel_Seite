@@ -71,6 +71,12 @@ td {
   background-color: burlywood;
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .anleitung {
   font-size: 40px;
   text-align: center;
@@ -84,7 +90,7 @@ td {
 .anleitung::before,
 .anleitung::after {
   position: absolute;
-  top: 18.5rem;
+  top: 296px;
   transform: translateX(-50%) translateY (-80);
   transition: 50ms transform;
 }
@@ -101,6 +107,40 @@ td {
 }
 
 .anleitung:hover {
+  background-color: rgba(245, 222, 179, 0.562);
+  color: black;
+}
+
+.refresh {
+  font-size: 40px;
+  text-align: center;
+  color: wheat;
+  border-radius: 50%;
+  background-color: black;
+  width: 50px;
+  height: 50px;
+}
+
+.refresh::before,
+.refresh::after {
+  position: absolute;
+  bottom: 140px;
+  transform: translateX(-50%) translateY (-80);
+  transition: 50ms transform;
+}
+
+.refresh:hover::before {
+  content: attr(data-tooltip);
+  color: black;
+  padding: 5px;
+  font-size: 15px;
+  text-align: center;
+  width: 150px;
+  height: 20px;
+  background: rgba(245, 222, 179, 0.836);
+}
+
+.refresh:hover {
   background-color: rgba(245, 222, 179, 0.562);
   color: black;
 }
