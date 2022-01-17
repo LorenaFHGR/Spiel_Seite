@@ -2,13 +2,13 @@ body {
   background-color: white;
   width: 1000px;
   margin: auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Courier New", Courier, monospace;
   color: black;
 }
 
 #uebertitel {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 60px;
+  font-weight: bold;
   text-align: center;
   padding-bottom: 10px;
   border-bottom: 5px;
@@ -71,13 +71,9 @@ td {
   background-color: burlywood;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.anleitung {
+.tooltip {
+  position: relative;
+  display: inline-block;
   font-size: 40px;
   text-align: center;
   color: wheat;
@@ -86,32 +82,39 @@ td {
   width: 50px;
   height: 50px;
 }
+.tooltip:hover {
+  background-color: wheat;
+  color: black;
+}
 
-.anleitung::before,
-.anleitung::after {
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 1000%;
+  background-color: rgba(245, 222, 179, 0.9);
+  color: black;
+  font-size: 12px;
+  text-align: left;
   position: absolute;
-  top: 296px;
-  transform: translateX(-50%) translateY (-80);
-  transition: 50ms transform;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  bottom: 60px;
+  left: 50%;
+  margin-left: -60px;
+  /*langsame einblendung*/
+  opacity: 0;
+  transition: opacity 1s;
 }
 
-.anleitung:hover::before {
-  content: attr(data-tooltip);
-  color: black;
-  padding: 5px;
-  font-size: 15px;
-  text-align: center;
-  width: 300px;
-  height: 410px;
-  background: rgba(245, 222, 179, 0.836);
-}
-
-.anleitung:hover {
-  background-color: rgba(245, 222, 179, 0.562);
-  color: black;
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
 .refresh {
+  position: relative;
+  display: inline-block;
+  left: 900px;
   font-size: 40px;
   text-align: center;
   color: wheat;
@@ -121,32 +124,34 @@ td {
   height: 50px;
 }
 
-.refresh::before,
-.refresh::after {
-  position: absolute;
-  bottom: 140px;
-  transform: translateX(-50%) translateY (-80);
-  transition: 50ms transform;
-}
-
-.refresh:hover::before {
-  content: attr(data-tooltip);
-  color: black;
-  padding: 5px;
-  font-size: 15px;
-  text-align: center;
-  width: 150px;
-  height: 20px;
-  background: rgba(245, 222, 179, 0.836);
-}
-
 .refresh:hover {
-  background-color: rgba(245, 222, 179, 0.562);
+  background-color: wheat;
   color: black;
+}
+
+.refresh .refreshtext {
+  visibility: hidden;
+  width: 300%;
+  background-color: rgba(245, 222, 179, 0.9);
+  color: black;
+  font-size: 12px;
+  text-align: middle;
+  padding: 5px;
+  position: absolute;
+  bottom: 60px;
+  margin-left: -60px;
+  /*langsame einblendung*/
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.refresh:hover .refreshtext {
+  visibility: visible;
+  opacity: 1;
 }
 
 footer {
-  font-size: 10px;
+  font-size: 15px;
   text-align: center;
   padding-top: 10px;
 }
