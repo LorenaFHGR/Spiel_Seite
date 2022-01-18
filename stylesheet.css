@@ -10,25 +10,19 @@ body {
   font-size: 60px;
   font-weight: bold;
   text-align: center;
+  margin-top: 20px;
   padding-bottom: 10px;
-  border-bottom: 5px;
-  border-bottom-style: solid;
-  border-color: black;
+  border-bottom: 5px solid black;
 }
 
-#titel {
-  font-size: 20px;
-  text-align: center;
-  padding-bottom: 50px;
-  margin-top: -20px;
-}
-
+/* Dies ist das Foto des Spiels */
 #spiel {
   display: flex;
   align-content: center;
   justify-content: center;
 }
 
+/* Nachfolgend die Tabelle und deren Inhalte sowie die Ausrichtung über das Foto */
 #koordinaten {
   display: flex;
   align-content: center;
@@ -44,9 +38,10 @@ td {
   width: 70px;
   height: 70px;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid transparent; /* Dies ist das Gitter. Für die Programmierung wurde "black" genutzt */
 }
 
+/* Die Spielsteine wurden alleine durch CSS in die Tabellenfelder gezeichnet (siehe auch HTML-Datei) */
 .schwarzerStein {
   width: 20px;
   height: 20px;
@@ -71,6 +66,10 @@ td {
   background-color: burlywood;
 }
 
+/* 
+Die beiden Buttons zur Anleitung und zum Neustart werden nachfolgend im CSS gestyled. Die Funktion des Neustarts 
+wird durch JavaScript ausgeführt. 
+*/
 .tooltip {
   position: relative;
   display: inline-block;
@@ -102,7 +101,7 @@ td {
   bottom: 70px;
   left: 50%;
   margin-left: -60px;
-  /*langsame einblendung*/
+  /*langsame Einblendung*/
   opacity: 0;
   transition: opacity 1s;
 }
@@ -132,11 +131,11 @@ td {
 
 .refresh .refreshtext {
   visibility: hidden;
-  width: 50px;
+  width: 60px;
   background-color: rgba(245, 222, 179, 0.9);
   color: black;
   font-size: 12px;
-  text-align: middle;
+  text-align: center;
   padding: 5px;
   position: absolute;
   bottom: 65px;
@@ -148,8 +147,9 @@ td {
   opacity: 1;
 }
 
+/* Eine simple Fusszeile */
 footer {
-  margin-top: 20px;
+  margin-top: 0px;
   font-size: 15px;
   text-align: center;
   padding-top: 10px;

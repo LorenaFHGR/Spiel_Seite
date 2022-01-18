@@ -1,4 +1,4 @@
-<!-- Dies ist das einfache Grundgerüst unserer Seite. Das Spielbrett wird auch hier definiert.-->
+<!-- Dies ist das Grundgerüst der Seite. -->
 
 <!DOCTYPE html>
 <html>
@@ -19,11 +19,12 @@
 
         <p id="uebertitel">MÜHLE</p>
        
-
+        <!-- Das Bild des Spielbretts, im CSS in den Hintergrund gestellt. -->
         <div id="spiel">
             <img src="pictures/spiel1.png" id="spielbrett" >
         </div>
 
+        <!-- Hier werden die Tabelle, die Spielsteine sowie die genauen Zellen des Drag & Drop definiert -->
         <div id="koordinaten">
             <table>
                 <tr>
@@ -155,6 +156,8 @@
                 </tr>
             </table>
         </div>
+
+        <!-- Der Inhalt des Anleitungs- sowie Refresh-Buttons ist hier aufgeführt -->
         <div class="tooltip">?
             <span class="tooltiptext">
                     <p style="font-size:larger; font-weight: bold;">SPIELANLEITUNG MÜHLE</p>
@@ -182,13 +185,14 @@
                     <br>
                     <br>•20 Züge lang kann kein Spieler eine Mühle bilden: unentschieden
             </span>
-          </div>
-          <div class="refresh">↻
+        </div>
+        <div class="refresh">↻
             <span class="refreshtext" style="font-weight: bold;">
-                refresh
+                Neustart
             </span>
         </div>
 
+        <!-- Die Fusszeile. -->
         <footer>
             <p>Projektarbeit für das Modul Webprogrammierung</p>
             <p>Leoni Wirth & Lorena Staiger</p>
