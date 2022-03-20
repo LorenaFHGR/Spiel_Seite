@@ -38,7 +38,7 @@ td {
   width: 70px;
   height: 70px;
   text-align: center;
-  border: 1px solid transparent; /* Dies ist das Gitter. Für die Programmierung wurde "black" genutzt */
+  border: 1px solid black; /* Dies ist das Gitter. Für die Programmierung wurde "black" genutzt */
 }
 
 /* Die Spielsteine wurden alleine durch CSS in die Tabellenfelder gezeichnet (siehe auch HTML-Datei) */
