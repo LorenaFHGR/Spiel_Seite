@@ -1,0 +1,283 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Muehle",
+    "contact": {
+      "email": "nicole.meyer@stud.fhgr.ch"
+    }
+  },
+  "host": "exemple.muehle.io",
+  "basePath": "/v1",
+  "tags": [
+    {
+      "name": "game",
+      "description": "Everything about the game"
+    },
+    {
+      "name": "field",
+      "description": "Access each field"
+    },
+    {
+      "name": "stone",
+      "description": "Dont know if needed yet"
+    },
+    {
+      "name": "user",
+      "description": "acess users"
+    }
+  ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/game": {
+      "post": {
+        "tags": [
+          "game"
+        ],
+        "summary": "Create Game ",
+        "description": "Creates new Game with GameId and first UserId",
+        "operationId": "createGame",
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "GameID und UserID des ersten Users",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Game"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "game"
+        ],
+        "summary": "adds second user to Game",
+        "description": "Ads UserId of second user to Game",
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "GameID und UserID beider User",
+            "schema": {
+              "$ref": "#/definitions/Game"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Game not found"
+          }
+        }
+      }
+    },
+    "/game/{GameId}": {
+      "get": {
+        "tags": [
+          "game"
+        ],
+        "summary": "Gets Game by GameId",
+        "description": "searches vor Game bei its Id",
+        "operationId": "searchGame",
+        "produces": [
+          "apprilication/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "GameId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Game not found"
+          }
+        }
+      }
+    },
+    "/field": {
+      "post": {
+        "tags": [
+          "field"
+        ],
+        "summary": "occupied field",
+        "description": "Triggered when a stone is moved",
+        "operationId": "setStone",
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Field"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/user": {
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Create new user",
+        "description": "Creates new User",
+        "operationId": "createsUSer",
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/user/{UserId}": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Gets User by UserId",
+        "description": "searches vor User bei its Id",
+        "operationId": "searchUser",
+        "produces": [
+          "apprilication/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "UserId",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "User not found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Field": {
+      "type": "object",
+      "properties": {
+        "FieldId": {
+          "type": "string"
+        },
+        "occupied": {
+          "type": "boolean"
+        },
+        "stoneId": {
+          "type": "string"
+        },
+        "locked": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "xml": {
+        "name": "Field"
+      }
+    },
+    "Stone": {
+      "type": "object",
+      "properties": {
+        "StoneId": {
+          "type": "string"
+        },
+        "FieldId": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string",
+          "enum": [
+            "black",
+            "white"
+          ]
+        }
+      },
+      "xml": {
+        "name": "Stone"
+      }
+    },
+    "Game": {
+      "type": "object",
+      "properties": {
+        "GameId": {
+          "type": "string"
+        },
+        "UserId1": {
+          "type": "string"
+        },
+        "UserId2": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "Game"
+      }
+    },
+    "User": {
+      "type": "object",
+      "properties": {
+        "UserId": {
+          "type": "number"
+        },
+        "UserName": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "User"
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}
